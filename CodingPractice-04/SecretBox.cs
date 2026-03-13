@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CodingPractice-04
+﻿public class SecretBox
 {
-    internal class SecretBox
-{
-}
+    private string _secret = "비밀";
+    public string PublicData = "공개";
 }

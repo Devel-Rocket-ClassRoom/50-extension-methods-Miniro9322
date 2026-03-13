@@ -1,10 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Linq;
 
-namespace CodingPractice-01
+public static class IntExtensions
 {
-    internal class IntExtensions
-{
-}
+    public static bool IsEven(this int number)
+    {
+        return number % 2 == 0;
+    }
+
+    public static bool IsOdd(this int number)
+    {
+        return number % 2 != 0;
+    }
+
+    public static string Repeat(this int number, int times)
+    {
+        return string.Concat(Enumerable.Repeat(number.ToString(), times));
+    }
 }

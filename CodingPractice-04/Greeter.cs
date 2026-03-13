@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CodingPractice-04
+public class Greeter
 {
-    internal class Greeter
-{
-}
+    public void SayHello()
+    {
+        Console.WriteLine("인스턴스 메서드: 안녕하세요!");
+    }
 }

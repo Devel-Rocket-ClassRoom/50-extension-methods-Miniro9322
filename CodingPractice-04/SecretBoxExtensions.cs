@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CodingPractice-04
+public static class SecretBoxExtensions
 {
-    internal class SecretBoxExtensions
-{
-}
+    public static void ShowData(this SecretBox box)
+    {
+        Console.WriteLine($"공개 데이터: {box.PublicData}");
+    }
 }

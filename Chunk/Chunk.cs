@@ -7,15 +7,26 @@ static class Chunk
 {
     public static IEnumerable<IEnumerable<T>> SplitChunk<T>(this IEnumerable<T> chunk, int size)
     {
-        if(chunk.Count() < 1)
+        if(size < 1)
         {
             throw new ArgumentException();
         }
 
-        IEnumerable<IEnumerable<T>> result = null;
+        List<T> result = new List<T>(size);
 
-        chunk.Chunk(size);
+        foreach(T chunkItem in chunk)
+        {
+            result.Add(chunkItem);
+            if(result.Count() == size)
+            {
+                yield return result;
+                result.Clear();
+            }
+        }
 
-        yield return chunk;
+        if(result.Count() > 0)
+        {
+            yield return result;
+        }
     }
 }

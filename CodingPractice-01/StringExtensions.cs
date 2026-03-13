@@ -1,10 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CodingPractice-01
+public static class StringExtensions
 {
-    internal class StringExtensions
-{
-}
+    public static int CountWords(this string text)
+    {
+        if (string.IsNullOrEmpty(text))
+        {
+            return 0;
+        }
+        return text.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
+    }
 }

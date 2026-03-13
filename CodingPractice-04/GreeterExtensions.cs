@@ -1,10 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CodingPractice-04
+public static class GreeterExtensions
 {
-    internal class GreeterExtensions
-{
-}
+    public static void SayHello(this Greeter greeter)
+    {
+        Console.WriteLine("확장 메서드: 반갑습니다!");
+    }
+
+    public static void SayGoodbye(this Greeter greeter)
+    {
+        Console.WriteLine("확장 메서드: 안녕히 가세요!");
+    }
 }

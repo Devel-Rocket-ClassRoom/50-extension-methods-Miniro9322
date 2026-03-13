@@ -1,10 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿public static class StringExtensions
+{
+    public static string First(this string text, int count)
+    {
+        if (string.IsNullOrEmpty(text))
+        {
+            return text;
+        }
 
-namespace CodingPractice-02
-{
-    internal class StringExtensions
-{
-}
+        if (count >= text.Length)
+        {
+            return text;
+        }
+
+        return text.Substring(0, count);
+    }
 }

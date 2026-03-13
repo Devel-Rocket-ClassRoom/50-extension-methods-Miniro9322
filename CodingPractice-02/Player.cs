@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CodingPractice-02
+﻿public class Player
 {
-    internal class Player
-{
-}
+    public string Name { get; set; }
+    public int Level { get; set; }
+    public int Experience { get; set; }
 }
